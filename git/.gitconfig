@@ -1,0 +1,13 @@
+[color]
+	ui = always
+	branch = always
+	diff = always
+[core]
+	pager = less -R
+[color "status"]
+	changed = brightred bold
+	untracked = brightred bold
+# Per-machine identity (name/email) lives in ~/.gitconfig.local, which is
+# not tracked, so personal and work machines can commit as different people.
+[include]
+	path = ~/.gitconfig.local
