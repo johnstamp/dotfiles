@@ -10,5 +10,14 @@ return {
         never_show = { ".DS_Store", ".git" },
       },
     },
+    window = {
+      mappings = {
+        -- Open the file but keep the cursor in the tree (Enter still jumps).
+        ["<tab>"] = function(state)
+          state.commands["open"](state)
+          vim.cmd("Neotree focus")
+        end,
+      },
+    },
   },
 }
